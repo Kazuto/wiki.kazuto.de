@@ -1,5 +1,7 @@
 <template>
-  <footer class="border-t border-secondary-100 text-sm dark:border-secondary-700">
+  <footer
+    class="border-t border-secondary-100 text-sm dark:border-secondary-700"
+  >
     <vContainer class="flex items-center justify-between">
       <p>
         © {{ new Date().getFullYear() }}
