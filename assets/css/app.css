@@ -23,7 +23,7 @@
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-gray-600;
+    @apply bg-secondary-600;
   }
 
   ::-webkit-scrollbar-thumb {
