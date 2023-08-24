@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Nunito Sans';
+  src:
+    local('Nunito Sans'),
+    local('Nunito Sans'),
+    url('~/assets/fonts/NunitoSans.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  * {
+    @apply box-border antialiased;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-600;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded bg-primary-200;
+  }
+
+  body,
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply overflow-x-hidden text-base;
+  }
+
+  b,
+  strong {
+    @apply font-bold;
+  }
+}
