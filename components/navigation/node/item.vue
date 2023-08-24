@@ -15,7 +15,7 @@
     <NuxtLink
       v-else
       :to="item._path"
-      class="block py-1 pl-2 text-sm text-secondary-500 dark:text-secondary-300 transition-colors hover:text-primary-500 dark:hover:text-primary-200"
+      class="block py-1 pl-2 text-sm text-secondary-500 transition-colors hover:text-primary-500 dark:text-secondary-300 dark:hover:text-primary-200"
     >
       {{ item.title }}
     </NuxtLink>
@@ -24,7 +24,7 @@
   <template v-else>
     <a
       :href="`#${item.id}`"
-      class="block py-1 text-sm text-secondary-500 dark:text-secondary-300 transition-colors hover:text-primary-500 dark:hover:text-primary-200"
+      class="block py-1 text-sm text-secondary-500 transition-colors hover:text-primary-500 dark:text-secondary-300 dark:hover:text-primary-200"
     >
       {{ item.text }}
     </a>
