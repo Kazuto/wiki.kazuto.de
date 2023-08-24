@@ -1,7 +1,7 @@
 <template>
   <div>
     <button
-      class="relative flex w-full items-center rounded border border-gray-200 px-2 py-1 text-left text-sm text-gray-400 transition hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-800"
+      class="relative flex w-full items-center rounded border border-secondary-200 px-2 py-1 text-left text-sm text-secondary-400 transition hover:bg-secondary-100 dark:border-secondary-700 dark:hover:bg-secondary-800"
       @click.prevent="openSearch"
     >
       <Icon
@@ -15,11 +15,11 @@
         K to open search"
       >
         <span
-          class="rounded bg-gray-100 px-1 py-0.5 dark:bg-gray-800 dark:text-gray-200"
+          class="rounded bg-secondary-100 px-1 py-0.5 dark:bg-secondary-800 dark:text-secondary-200"
           >CTRL</span
         >
         <span
-          class="rounded bg-gray-100 px-1 py-0.5 dark:bg-gray-800 dark:text-gray-200"
+          class="rounded bg-secondary-100 px-1 py-0.5 dark:bg-secondary-800 dark:text-secondary-200"
           >K</span
         >
       </div>
@@ -30,7 +30,7 @@
       @click="closeSearch"
     >
       <div
-        class="mx-4 mt-56 rounded bg-gray-100 shadow dark:bg-gray-800 md:mx-auto md:w-2/3 lg:w-2/3 xl:w-1/3"
+        class="mx-4 mt-56 rounded bg-secondary-100 shadow dark:bg-secondary-800 md:mx-auto md:w-2/3 lg:w-2/3 xl:w-1/3"
         @click.stop
       >
         <div>
@@ -39,19 +39,19 @@
             v-model="searchQuery"
             type="text"
             placeholder="Search..."
-            class="w-full border-none bg-transparent p-4 placeholder:text-gray-400 focus:outline-none"
+            class="w-full border-none bg-transparent p-4 placeholder:text-secondary-400 focus:outline-none"
           />
         </div>
 
         <div
           v-if="searchResult.length > 0"
-          class="border-t border-gray-300 p-2 dark:border-gray-700"
+          class="border-t border-secondary-300 p-2 dark:border-secondary-700"
         >
           <NuxtLink
             v-for="item in searchResult"
             :key="item.title"
             :to="item.item._path"
-            class="block rounded p-2 transition hover:bg-gray-100 dark:hover:bg-gray-700"
+            class="block rounded p-2 transition hover:bg-secondary-100 dark:hover:bg-secondary-700"
           >
             <div>
               <h2 class="text-lg font-bold">

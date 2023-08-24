@@ -22,7 +22,7 @@
       <div class="items-between flex pt-8">
         <NuxtLink
           v-if="prev"
-          class="text-gray-500 transition hover:text-primary-500 dark:text-gray-300 dark:hover:text-primary-500"
+          class="text-secondary-500 transition hover:text-primary-500 dark:text-secondary-300 dark:hover:text-primary-500"
           :to="prev._path"
         >
           &larr; {{ prev.title }}
@@ -30,7 +30,7 @@
         <span class="grow"></span>
         <NuxtLink
           v-if="next"
-          class="text-gray-500 transition hover:text-primary-500 dark:text-gray-300 dark:hover:text-primary-500"
+          class="text-secondary-500 transition hover:text-primary-500 dark:text-secondary-300 dark:hover:text-primary-500"
           :to="next._path"
         >
           {{ next.title }} &rarr;

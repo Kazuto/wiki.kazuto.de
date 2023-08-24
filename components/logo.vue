@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-8 block h-auto w-32 text-gray-400 dark:text-gray-500">
+  <div class="mb-8 block h-auto w-32 text-secondary-400 dark:text-secondary-500">
     <svg
       viewBox="127.187 80.947 84.693 20.445"
       xmlns="http://www.w3.org/2000/svg"

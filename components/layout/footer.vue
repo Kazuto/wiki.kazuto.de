@@ -1,5 +1,5 @@
 <template>
-  <footer class="border-t border-gray-100 text-sm dark:border-gray-800">
+  <footer class="border-t border-secondary-100 text-sm dark:border-secondary-700">
     <vContainer class="flex items-center justify-between">
       Some content
     </vContainer>

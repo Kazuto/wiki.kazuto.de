@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-50 text-gray-600 dark:bg-gray-900 dark:text-gray-100">
+  <div class="bg-secondary-50 text-secondary-600 dark:bg-secondary-800 dark:text-secondary-100">
     <div class="grid min-h-screen lg:grid-cols-[auto_1fr]">
       <vNavigationSidebarMenu />
       <vNavigationSidebarMenuMobile v-if="menuState" />

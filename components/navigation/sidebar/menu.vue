@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="hidden w-80 border-r border-gray-100 p-8 dark:border-gray-800 lg:block"
+    class="hidden w-80 border-r border-secondary-100 p-8 dark:border-secondary-700 lg:block"
   >
     <vLogo />
     <div class="mb-4">
