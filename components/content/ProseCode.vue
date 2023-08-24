@@ -39,7 +39,7 @@ div[class*='language-'] {
   }
 
   pre {
-    @apply my-2 rounded bg-neutral-200 px-1 py-4 dark:bg-secondary-800;
+    @apply my-2 rounded bg-secondary-100 px-1 py-4 dark:bg-secondary-700;
 
     code .line {
       @apply relative block min-h-[1rem] pl-12;
