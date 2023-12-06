@@ -16,8 +16,10 @@
       >
         <span
           class="rounded bg-secondary-100 px-1 py-0.5 dark:bg-secondary-800 dark:text-secondary-200"
-          >CTRL</span
         >
+          <span v-if="isMac">⌘</span>
+          <span v-else> CTRL </span>
+        </span>
         <span
           class="rounded bg-secondary-100 px-1 py-0.5 dark:bg-secondary-800 dark:text-secondary-200"
           >K</span
@@ -82,11 +84,17 @@ const options = {
   keys: ['title', 'description'],
 };
 
+const isMac = ref<boolean>(false);
+
 onMounted(async () => {
   await getContent();
 
+  isMac.value = /Mac|iPod|iPhone|iPad/.test(navigator.platform);
+
   window.addEventListener('keydown', (e: KeyboardEvent) => {
-    if (e.ctrlKey && e.key === 'k') {
+    const key = isMac ? e.metaKey : e.ctrlKey;
+
+    if ((key && e.key === 'k') || e.key === '/') {
       isSearchOpen.value = !isSearchOpen.value;
     }
 
