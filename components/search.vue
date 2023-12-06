@@ -72,6 +72,8 @@
 import { ParsedContent } from '@nuxt/content/dist/runtime/types';
 import Fuse from 'fuse.js';
 
+import useOperatingSystem from '@/composables/useOperatingSystem';
+
 const content = ref<ParsedContent[]>([]);
 
 const input = ref<HTMLInputElement | null>(null);
@@ -84,17 +86,19 @@ const options = {
   keys: ['title', 'description'],
 };
 
-const isMac = ref<boolean>(false);
+const isMac = ref<boolean>(true);
 
 onMounted(async () => {
-  await getContent();
+  isMac.value = await useOperatingSystem().isMac();
 
-  isMac.value = /Mac|iPod|iPhone|iPad/.test(navigator.platform);
+  await getContent();
 
   window.addEventListener('keydown', (e: KeyboardEvent) => {
     const key = isMac ? e.metaKey : e.ctrlKey;
 
     if ((key && e.key === 'k') || e.key === '/') {
+      e.preventDefault();
+
       isSearchOpen.value = !isSearchOpen.value;
     }
 
