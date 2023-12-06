@@ -5,7 +5,6 @@ icon: 'tabler:file-neutral'
 ---
 
 ## My presets
-
 I use the following presets to organize my files and establish compatibility with other programs such as:
 - [Emby](https://emby.media/)
 - [Radarr](https://radarr.video/)
@@ -13,17 +12,19 @@ I use the following presets to organize my files and establish compatibility wit
 
 *All presets move files to their appropriate folders.*
 
-**Movies**
+## Movies
 `{localize.de.ny}\{localize.de.ny} [{"$vs-"}{vf}, {vc}, {ac}, {channels}] {audioLanguages.ISO2*.upper().sort()}`
 
 Result: `Akira (1988)\Akira (1988) [BluRay-2160p, x265, DTS, 5.1] [DE, EN, JA]`,
 
-**TV Shows & Anime**
+## TV Shows & Anime
 `{n}/{'Staffel '+ s.pad(2)}/{sxe} - {t} [{"$vs-"}{vf}, {vc}, {ac}, {channels}] {audioLanguages.ISO2*.upper().sort()}`
 
 Result: `Bleach/Staffel 01/ 1x01 - Der Tag, an dem ich ein Shinigami wurde [BluRay-720p, x264, AC3, 2.0] [DE, JA]`
 
-Explanation:
+---
+
+**Explanation of expressions**
 |Expression|Description|
 |-|-|
 |`{n}`|Name|
