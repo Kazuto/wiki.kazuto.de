@@ -71,7 +71,6 @@
 <script setup lang="ts">
 import type { ParsedContent } from '@nuxt/content/dist/runtime/types';
 import Fuse from 'fuse.js';
-
 import useSystem from '@/composables/useSystem';
 
 const content = ref<ParsedContent[]>([]);
@@ -94,6 +93,10 @@ onMounted(async () => {
   await getContent();
 
   window.addEventListener('keydown', (e: KeyboardEvent) => {
+    if (!e.key) return;
+
+    if (isSingleModifier(e)) return;
+
     const key = isMac ? e.metaKey : e.ctrlKey;
 
     if ((key && e.key === 'k') || e.key === '/') {
@@ -107,6 +110,16 @@ onMounted(async () => {
     }
   });
 });
+
+const isSingleModifier = (e: KeyboardEvent): boolean => {
+  return (
+    (!e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey) ||
+    e.key === 'Alt' ||
+    e.key === 'Control' ||
+    e.key === 'Meta' ||
+    e.key === 'Shift'
+  );
+};
 
 async function getContent() {
   const response = await queryContent('/').find();
