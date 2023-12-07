@@ -69,10 +69,10 @@
 </template>
 
 <script setup lang="ts">
-import { ParsedContent } from '@nuxt/content/dist/runtime/types';
+import type { ParsedContent } from '@nuxt/content/dist/runtime/types';
 import Fuse from 'fuse.js';
 
-import useOperatingSystem from '@/composables/useOperatingSystem';
+import useSystem from '@/composables/useSystem';
 
 const content = ref<ParsedContent[]>([]);
 
@@ -86,10 +86,10 @@ const options = {
   keys: ['title', 'description'],
 };
 
-const isMac = ref<boolean>(true);
+const isMac = ref<boolean>(false);
 
 onMounted(async () => {
-  isMac.value = await useOperatingSystem().isMac();
+  isMac.value = useSystem().isMac();
 
   await getContent();
 
