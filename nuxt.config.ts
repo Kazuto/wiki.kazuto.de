@@ -14,6 +14,7 @@ export default defineNuxtConfig({
     {
       path: '~/components',
       prefix: 'v',
+      global: true,
     },
     {
       path: '~/components/content',
