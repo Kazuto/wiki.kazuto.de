@@ -3,16 +3,13 @@ title: 'ZSH'
 description: 'Useful aliases and hooks for ZSH'
 ---
 
-## Run `nvm` before executing `npm` commands
+## Run `nvm` before executing `npm`, `yarn` or `bun` commands
 
 ```bash
 preexec() {
-  local nvmrc_path
-  nvmrc_path="$(nvm_find_nvmrc)"
-
-  if [[ "$1" == npm\ * && -n "$nvmrc_path" ]]; then
+  if [[ "$1" == @(npm|yarn|bun) ]] && [ -f .nvmrc ]; then
     local nvmrc_node_version
-    nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+    nvmrc_node_version=$(nvm version "$(cat .nvmrc)")
 
     if [ "$nvmrc_node_version" = "N/A" ]; then
       nvm install
