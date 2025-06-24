@@ -5,9 +5,40 @@ description: 'Several settings like labels for GitHub repositories'
 
 ## Color scheme for GitHub labels
 
-- <v-atoms-tag color="#27ec00" class="mb-1">Feature</v-atoms-tag> `#27ec00`
-- <v-atoms-tag color="#a2eeef" class="mb-1">Refactor</v-atoms-tag> `#a2eeef`
-- <v-atoms-tag color="#e25362" class="mb-1">Bug</v-atoms-tag> `#e25362`
-- <v-atoms-tag color="#e50408" class="mb-1">Conflicts</v-atoms-tag> `#e50408`
-- <v-atoms-tag color="#0075ca" class="mb-1">Documentation</v-atoms-tag> `#0075ca`
-- <v-atoms-tag color="#93d68b" class="mb-1">Dependencies</v-atoms-tag> `#93d68b`
+<div class="flex gap-2">
+  <v-utils-copy value="#FC2929">
+    <v-atoms-tag color="#FC2929">breaking change</v-atoms-tag>
+  </v-utils-copy>
+
+  <v-utils-copy value="#27EC00">
+    <v-atoms-tag color="#27EC00">feature</v-atoms-tag>
+  </v-utils-copy>
+
+  <v-utils-copy value="#EBFC90">
+    <v-atoms-tag color="#EBFC90">test</v-atoms-tag>
+  </v-utils-copy>
+
+  <v-utils-copy value="#A2EEEF">
+    <v-atoms-tag color="#A2EEEF">refactor</v-atoms-tag>
+  </v-utils-copy>
+
+  <v-utils-copy value="#E25362">
+    <v-atoms-tag color="#E25362">bug</v-atoms-tag>
+  </v-utils-copy>
+
+  <v-utils-copy value="#C55408">
+    <v-atoms-tag color="#C55408">conflict</v-atoms-tag>
+  </v-utils-copy>
+
+  <v-utils-copy value="#43A6D6">
+    <v-atoms-tag color="#43A6D6">documentation</v-atoms-tag>
+  </v-utils-copy>
+
+  <v-utils-copy value="#93D68B">
+    <v-atoms-tag color="#93D68B">dependency</v-atoms-tag>
+  </v-utils-copy>
+
+  <v-utils-copy value="#8E83D7">
+    <v-atoms-tag color="#8E83D7">on hold</v-atoms-tag>
+  </v-utils-copy>
+</div>
