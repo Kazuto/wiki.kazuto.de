@@ -4,7 +4,7 @@
       v-bind="$attrs"
       :aria-label="`Switch to ${getNextTheme()} mode`"
       class="rounded p-1 px-3 text-lg text-secondary-500 dark:text-secondary-300"
-      @click="setTheme(colorMode.preference)"
+      @click="setTheme()"
     >
       <Icon :name="icon" />
     </button>
