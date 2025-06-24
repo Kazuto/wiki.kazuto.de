@@ -1,25 +1,17 @@
 <template>
-  <span
+   <span
     class="inline-block rounded-full border px-2 py-0.5 text-sm font-bold"
     :style="{
       backgroundColor: `rgba(${color.r}, ${color.g}, ${color.b}, 0.18)`,
       color: lighten(color, 50),
       borderColor: lighten(color, 30, 0.3),
     }"
+    > <slot /> </span
   >
-    <slot />
-  </span>
 </template>
 
 <script setup lang="ts">
-const props = withDefaults(
-  defineProps<{
-    color: string;
-  }>(),
-  {
-    color: '#aaa',
-  }
-);
+const props = withDefaults(defineProps<{ color: string }>(), { color: '#aaa' });
 
 const color = computed(() => toRGB(props.color));
 
@@ -42,11 +34,7 @@ function toRGB(hex: string) {
   const g = (bigint >> 8) & 255;
   const b = bigint & 255;
 
-  return {
-    r,
-    g,
-    b,
-  };
+  return { r, g, b };
 }
 
 function lighten(
@@ -67,3 +55,4 @@ function calculateLightness(color: number, percent: number) {
   return Math.min(255, Math.floor(color + (255 - color) * (percent / 100)));
 }
 </script>
+
